@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center">
+  <h1> Welcome {{ user.username }} </h1>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1 class="header">
+        Automate Workflow Process, Improve IT Help Desk Efficiency.
+      </h1>
+
+      <p>
+       
+        
+            Automate every step of office cycle right from categorization to technician assignment by using business rules.
+            Make sure that no ticket is left unassigned by automatically assigning tickets to technicians based on round robin or load balancing auto assign models.
+            Communicate better with end users with automated notifications that use custom email templates.
+            Reduce the rate of repeat incidents by defining closure rules to ensure effective resolution.
+        
+        </p>
+
+    </div>
+
+  </div>
+
+  <p>If you are experiencing any problem with any device kindly report here.</p>
+
+  <a class="btn btn-info" href="{% url 'reportdevice' %}">Report Here</a>
+
+</div>
+
+
+{% endblock content%}

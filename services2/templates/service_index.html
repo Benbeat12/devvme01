@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+
+<h1 class="text-center">Services</h1>
+
+<div class="album py-5 bg-light">
+    <div class="container_srv align-item-center">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for service in services %}
+            <div class="col-md-4 ">
+                <div class="card shadow-sm mb-2 mt-2" style="width: 18rem;">
+                    <img aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" focusable="false"
+                         height="225" preserveAspectRatio="xMidYMid slice" role="img" src="{{ service.thumbnail.url }}"
+                         width="100%"><title>Placeholder</title>
+                    <rect fill="#55595c" height="100%" width="100%"/>
+                    <text dy=".3em" fill="#eceeef" x="50%" y="50%"><h5 class="card-title">{{ service.title }}</h5>
+                    </text>
+                    </img>
+
+                    <div class="card-body">
+                        <p class="card-text">{{ service.description }}</p>
+                        <div class=" justify-content-between align-items-center">
+                            <div class="btn">
+
+                                <a class="btn btn-primary my-2" href="{% url 'services' service.slug %}">Voir</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+
+
+<section class=" ">
+    <div class="container text-center">
+        <h1 class="jumbotron-heading">Album example</h1>
+    </div>
+    <div class="container text-left">
+        <p class="lead text-active">Something short and leading about the collection below—its contents, the creator,
+            etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+    </div>
+    <p class="container ">
+ <span>
+            <a class="btn btn-primary my-2" href="#">Main call to action</a>
+
+            <a class="btn btn-secondary my-2" href="{% url 'services' %}">Secondary action</a>
+
+
+    </span>
+    </p>
+
+
+</section>
+
+
+{% endblock %}

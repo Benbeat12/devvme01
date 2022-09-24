@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+
+<div class="jumbotron">
+  <h1>All Devices Added by Admin</h1>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Device Name</th>
+            <th scope="col">Device Serial Number</th>
+            <th scope="col">Device Model</th>
+            <th scope="col">Device Origin</th>
+            <th scope="col">Device Status</th>
+            <th scope="col">Date Added</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for newdevice in newdevices %}
+          <tr>
+            <th scope="row">1</th>
+            <td>{{ newdevice.device_name }}</td>
+            <td>{{ newdevice.device_serial_num }}</td>
+            <td>{{ newdevice.device_model }}</td>
+            <td>{{ newdevice.origin }}</td>
+            <td>{{ newdevice.device_status }}</td>
+            <td>{{ newdevice.date_added }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+</div>
+
+
+
+{% endblock %}

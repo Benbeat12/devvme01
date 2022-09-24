@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+    <div class="product">
+        <div class="description">
+            <h1>Services</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class=" mb-2" style="width: 18rem;">
+                        <h2>{{ services.name }}</h2>
+                        <img alt="{{ service.name }}" src="{{ service.thumbnail.url }}">
+                        <p>{{ service.description }}</p>
+                        {% if user.is_authenticated %}
+                        <p>
+                            <a href="">Ajouter dans le panier </a>
+                        </p>
+                        {% endif %}
+                        <div class="card-body">
+                            <a class="card-body btn btn-primary" href="">Voir itheme </a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

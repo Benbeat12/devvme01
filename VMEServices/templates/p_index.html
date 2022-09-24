@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+
+<head>
+    <title>Buy cool new product</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+<section>
+    <div class="product">
+        <div class="description">
+        <h1>Services</h1>
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4">
+                <div class="card mb-2" style="width: 18rem;">
+                    <h2>{{ product.name }}</h2>
+                    <h3>${{ product_price.price }}</h3>
+                    <img alt="{{ product.name }}" class="card-img-top" src="{{ product.thumbnail.url }}">
+                    <div class="card-body">
+                        <a class="card-body btn btn-primary" href="{% url 'product' product.slug %}">Voir itheme </a>
+                        <p class="card-text">{{ product.description }}</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+
+        </div>
+        </div>
+    </div>
+</section>
+</body>
+
+{% endblock %}
+</html>
+
+
+

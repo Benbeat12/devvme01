@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+
+<div class="container1 p-1 mb-4 rounded-3">
+  <div class="row container-fluid py-1 ">
+<link rel="stylesheet"  href='{% static "css/style.css" %}'>
+
+    <div class="position-relative overflow-hidden  p-3 p-md-1 m-md-3  text-white">
+      <div class="  mx-auto my-1">
+        <h1 class="display-5 fw-bold">VME Support informatique</h1>
+        <p class=" col-md-8 fs-4 lead ">Notre service de Support informatique s'adresse aux entreprises publiques et privées de la province du Québec.</p>
+        <a class="btn btn-outline-secondary text-black" href="#">Coming soon</a>
+      </div>
+    </div>
+
+
+      </div>
+    </div>
+<section class="grayBg sectionFeatures  p-5 p-md-5 m-md-6 p-lg-5 mx-auto my-1 ">
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Support</h5>
+        <p class="card-text">Ouvrir un ticket auprès du Service Desk Vous recevrez un accusé de réception automatique par e-mail avec votre numéro de ticket.</p>
+        <a href="{% url 'reportdevice' %}" class="btn btn-primary ">Support</a>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Services</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'VMEServices' %}" class="btn btn-primary">Service</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2>Change the background</h2>
+          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+          <button class="btn btn-outline-light" type="button">Example button</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Add borders</h2>
+          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+  <div class="container">
+
+      <div class="text p-3 mb-3 ">
+       <h2 class="featurette-heading ">Synthèse<span> </span></h2>
+          <img src="/images/images.jpeg" class="img-fluid" alt="...">
+            <p class="lead">Bénéficiez d'une maintenance préventive, d'une assistance sur site ou à distance et obtenez des informations exploitables sur les applications et les données métier critiques.</div>
+    </div>
+<section class="grayBg sectionFeatures p-3 ">
+
+		<div class="clearFix flexWrap p-5 ">
+							<div class="col-3 col-tab-6 col-mob-12 floatLeft b-box flexedItem padding20">
+					<div class="b-box featureIcon"  style="background:#41c0e0">
+						<i class="fas fa-theater-masks"></i>
+					</div>
+					<div class="bottom  b-box ">
+						<h2 class="hand mainTitle small mb0">Services</h2>
+						<p class="content small padding5 ">Les services de support technologique VME® prennent en charge l'ensemble de votre environnement informatique, y compris les clouds, le centre de données et l'infrastructure informatique sur site</p>
+					</div>
+				</div>
+							<div class="col-3 col-tab-6 col-mob-12 floatLeft b-box flexedItem padding20">
+					<div class="b-box featureIcon"  style="background:#f59834">
+						<i class="far fa-praying-hands"></i>
+					</div>
+					<div class="bottom  b-box ">
+						<h2 class="hand mainTitle small mb0">Le social</h2>
+						<p class="content small padding5">Encourager les interactions avec ses pairs, les jeux, le sens du partage, le sens d’aider, le respect les autres, le travail en groupe.</p>
+					</div>
+				</div>
+			<div class="col-3 col-tab-6 col-mob-12 floatLeft b-box flexedItem padding20">
+					<div class="b-box featureIcon"  style="background:#5db33b">
+						<i class="fal fa-graduation-cap"></i>
+					</div>
+					<div class="bottom  b-box ">
+						<h2 class="hand mainTitle small mb0">Le créatif</h2>
+						<p class="content small padding5">Laisser l’enfant s’exprimer librement, intervenir rarement, ne jamais fournir de modèle à reproduire, mettre à leur disposition le matériel nécessaire.</p>
+					</div>
+				</div>
+		</div>
+
+</section>
+
+<div>
+	<br>
+</div>
+
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>GREEN</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
